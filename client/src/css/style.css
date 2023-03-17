@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+.App1 {
+  text-align: center;
+  display: flex;
+  background-color: #282c34;
+  color:white;
+  position: absolute;
+  overflow: hidden;
+  top: 0;left: 0;right: 0;bottom: 0;
+}
+
+:root {
+  --clr:#0FF0FC;
+  --font-family: 'Manrope', sans-serif;
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  
+  --color-bg: #040C18;
+  --color-footer : #031B34;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
+}
+
+/* Homepage */
+.gradient_bg{
+  /* ff 3.6+ */
+  background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+  /* opera 11.10+ */
+  background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+  /* ie 10+ */
+  background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+  /* global 92%+ browsers support */
+  background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.gradient_text{
+  font-family: var(--font-family);
+  font-size: 45px;
+  font-weight: 800;
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clop:text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section_padding{
+  padding: 4rem 6rem;
+}
+.section_margin{
+  padding: 4rem 6rem;
+}
+
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media screen and (max-width:700px){
+  .section_padding{
+    padding: 4rem;
+  }
+  .section_margin{
+    padding: 4rem;
+  }
+}
+@media screen and (max-width:550px){
+  .section_padding{
+    padding: 4rem 2rem;
+  }
+  .section_margin{
+    padding: 4rem 2rem;
+  }
+}
+
+.Homepage{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding-right: 40px;
+  padding-left: 20px;
+  width: 100vw;
+}
+.header_contents{
+  padding: 30px;
+  width: 55%;
+}
+.header_section{
+  display: flex;
+  flex-direction: row;
+  padding: 10px 30px;
+}
+
+.header_image img{
+  height: 650px;
+}
+.logo{
+  height: 60px;
+}
+.logocontainer{
+  flex:1;
+}
+.login{
+  color: white;
+  display: flex;
+  gap: 25px;
+}
+.signin{
+  height: 50px;
+  width: 100px;
+}
+.signup{
+  height: 50px;
+  width: 100px;
+  background:#ff4820;
+  border-radius: 5px;
+}
+
+
+.sidemenu{
+  width: 250px;
+  padding: 10px;
+  background-color: #202123;
+}
+
+.chatbox{
+  flex:1;
+  background-color: #343541;
+  
+}
+
+.side-menu-button{
+  border-radius: 5px;
+  padding: 12px;
+  text-align: left;
+  border: 1px solid white;
+  transition: ease 0.25s all;
+}
+.side-menu-button:hover{
+  background-color: rgba(255,255,255,0.1);
+}
+.side-menu-button span{
+  padding-left: 6px;
+  padding-right: 12px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.chat-input-holder{
+  padding: 24px;
+}
+
+.chat-input-textarea{
+  background-color: #40414f;
+  width: 90%;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 1.25em;
+  border: none;
+  border-color: none;
+  color: white;
+  outline: none;
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.chatlog{
+  text-align: left;
+  height: 650px;
+  overflow-y: scroll;
+}
+.chat-message.chatgpt{
+  background-color: #444654;
+}
+.chat-message-center{
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  padding: 12px;
+  padding-left: 24px;
+  padding-right:24px ;
+}
+
+.avatar{
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.avatar.chatgpt{
+  background-color:#0da37f;
+  height: 40px;
+  border-radius: 50%;
+  width: 40px;
+}
+
+.chatbox{
+  flex: 1;
+  overflow: auto;
+  background-color: #343541;
+  position: relative;
+}
+
+.message{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button {
+  position: relative;
+  background: #4d4949;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  padding: 1rem 3rem;
+  transition: 0.2s;
+}
+
+.button:hover {
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: var(--clr);
+  color: var(--clr);
+  /* box-shadow: 0 0 35px var(--clr); */
+  animation: box 3s infinite;
+}
+
+.buttons{
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #054083;
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+}
+.button i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.button i::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 80%;
+  top: -2px;
+  border: 2px solid var(--clr);
+  background: #070242;
+  transition: 0.2s;
+}
+
+.button:hover i::before {
+  width: 15px;
+  left: 20%;
+  animation: move 3s infinite;
+}
+
+.button i::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  left: 20%;
+  bottom: -2px;
+  border: 2px solid var(--clr);
+  background: #222228;
+  transition: 0.2s;
+}
+
+.button:hover i::after {
+  width: 15px;
+  left: 80%;
+  animation: move 3s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes box {
+  0% {
+    box-shadow: #27272c;
+  }
+  50% {
+    box-shadow: 0 0 25px var(--clr);
+  }
+  100% {
+    box-shadow: #27272c;
+  }
+}
+

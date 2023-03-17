@@ -5,6 +5,8 @@ import cors from "cors";
 import connectDB from "./mongodb/connect.js";
 import postRoute from "./routes/postRoute.js";
 import dalleRoute from "./routes/dalleRoute.js";
+import chatgptRoute from "./routes/chatgptRoute.js";
+import bodyParser from "body-parser";
 
 dotenv.config();
 
@@ -14,6 +16,7 @@ app.use(express.json({ limit: "50mb" }));
 
 app.use("/api/v1/post", postRoute);
 app.use("/api/v1/dalle", dalleRoute);
+app.use("/chatgpt", chatgptRoute);
 
 app.get("/", async (req, res) => {
   res.send("hello from Dall-E!");
